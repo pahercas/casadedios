@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Web Versión 1.0 Final</title>
+    <style>
+        /* ESTO ARREGLA EL FONDO */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('fondo.jpg'); /* Debe llamarse igual que su foto */
+            background-size: cover;            /* Estira la foto para que cubra todo */
+            background-repeat: no-repeat;      /* Evita que se vea doble o triple */
+            background-attachment: fixed;      /* La foto se queda quieta al bajar */
+            background-position: center;       /* Centra la imagen */
+            font-family: Arial, sans-serif;
+        }
+
+        /* ESTO ARREGLA EL BOTÓN DE WHATSAPP */
+        .boton-ws {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;  /* Tamaño del círculo */
+            height: 70px;
+            z-index: 999;
+        }
+
+        .boton-ws img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/SU_NUMERO_AQUI" class="boton-ws" target="_blank">
+        <img src="whatsapp.png" alt="Contactar por WhatsApp">
+    </a>
+
+</body>
+</html>
