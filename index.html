@@ -1,17 +1,3 @@
-¡No te preocupes! Te entiendo perfectamente. A veces la tecnología se pone caprichosa y lo que parece fácil se enreda. No necesitas ser un experto en programación, vamos a hacerlo paso a paso para que tu web quede perfecta hoy mismo.
-
-El problema es que en tu archivo de GitHub falta una parte del código o hay una letra que no coincide. Para que no tengas que buscar el fallo, aquí tienes el código completo y corregido.
-
-Qué tienes que hacer:
-Copia todo el código que verás abajo (haz clic en el icono de copiar arriba a la derecha del cuadro de código).
-
-Ve a tu cuenta de GitHub, entra en el archivo index.html y dale al icono del lápiz (editar).
-
-Borra todo lo que haya dentro de ese archivo y pega este código nuevo.
-
-Baja hasta el final y dale al botón verde que dice "Commit changes".
-
-HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -40,12 +26,12 @@ HTML
             scroll-behavior: smooth;
         }
 
-        /* CABECERO CORREGIDO */
+        /* CABECERO */
         .hero {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('fondo.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('fondo.jpg');
             background-size: cover;
             background-position: center;
-            height: 70vh; /* Un poco más alto para que se vea mejor */
+            height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -53,8 +39,8 @@ HTML
             text-align: center;
             color: white;
         }
-        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 8vw, 4rem); color: var(--dorado); margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.5rem; font-style: italic; margin-top: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 8vw, 4rem); color: var(--dorado); margin: 0; }
+        .hero p { font-size: 1.5rem; font-style: italic; margin-top: 10px; }
 
         /* NAVEGACIÓN */
         nav {
@@ -151,7 +137,7 @@ HTML
     <section class="contenedor" id="quienes">
         <h2 class="titulo-seccion">Quiénes Somos</h2>
         <div class="texto-principal">
-            <p>Somos una iglesia que reconoce a <span class="resaltado">Jesucristo como el centro de nuestra fe</span> y el Señor de nuestras vidas.</p>
+            <p>Somos una iglesia que reconoce a <span class="resaltado">Jesucristo como el centro de nuestra fe</span> y el Señor de nuestras vidas. Creemos que Dios sigue transformando corazones hoy.</p>
             <p>En C.C. Casa de Dios Valdemoro somos una <span class="resaltado">familia espiritual</span> donde adoramos juntos, crecemos juntos y servimos juntos.</p>
             
             <a href="https://www.youtube.com/@comunidadcristianacasadedi4850" target="_blank" class="btn-youtube">
@@ -189,7 +175,7 @@ HTML
             <h2 class="titulo-seccion">Ubicación</h2>
             <p style="text-align: center; font-size: 1.6rem; font-weight: 900;">Calle de las Vacas, Local 5 - Valdemoro</p>
             <div class="mapa-contenedor">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.8824151756536!2d-3.6791942!3d40.1894459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422026852e1f2b%3A0xc02e48e89f5f0851!2sCalle%20de%20las%20Vacas%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.563854652281!2d-3.6792376!3d40.1910243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4220367f000001%3A0x7f0f0f0f0f0f0f0f!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1710000000000" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
