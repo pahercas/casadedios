@@ -14,6 +14,7 @@
             --negro-puro: #000000;
             --blanco: #ffffff;
             --gris-claro: #f9f9f9;
+            --rojo-yt: #FF0000;
         }
 
         * { box-sizing: border-box; }
@@ -25,12 +26,12 @@
             scroll-behavior: smooth;
         }
 
-        /* CABECERO (Se mantiene igual que la imagen) */
+        /* CABECERO */
         .hero {
             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('fondo.jpg');
             background-size: cover;
             background-position: center;
-            height: 65vh;
+            height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -39,7 +40,7 @@
             color: white;
         }
         .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(2.5rem, 8vw, 4rem); color: var(--dorado); margin: 0; }
-        .hero p { font-size: 1.5rem; font-style: italic; margin-top: 10px; font-weight: 400; }
+        .hero p { font-size: 1.5rem; font-style: italic; margin-top: 10px; }
 
         /* NAVEGACIÓN */
         nav {
@@ -50,6 +51,7 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
         nav a { color: var(--negro-puro); text-decoration: none; font-weight: 900; padding: 10px 20px; text-transform: uppercase; font-size: 0.85rem; }
+        .nav-yt { color: var(--rojo-yt) !important; }
 
         .contenedor { padding: 80px 25px; max-width: 1100px; margin: auto; }
         .titulo-seccion { 
@@ -62,17 +64,17 @@
             text-transform: uppercase;
         }
 
-        /* QUIÉNES SOMOS */
-        .texto-quienes { font-size: 1.35rem; font-weight: 700; line-height: 1.8; text-align: center; }
+        /* TEXTOS */
+        .texto-principal { font-size: 1.35rem; font-weight: 700; line-height: 1.8; text-align: center; }
         .resaltado { color: var(--dorado-fuerte); font-weight: 900; }
 
         /* QUÉ CREEMOS */
         .seccion-gris { background-color: var(--gris-claro); }
         .item-fe { border-left: 6px solid var(--dorado-fuerte); padding-left: 25px; margin-bottom: 40px; }
         .item-fe h3 { color: var(--dorado-fuerte); font-family: 'Cinzel', serif; font-size: 1.8rem; margin: 0 0 10px 0; }
-        .item-fe p { font-size: 1.2rem; font-weight: 700; margin: 0; }
+        .item-fe p { font-size: 1.2rem; font-weight: 700; }
 
-        /* HORARIOS (Cuadros con borde negro y dorado) */
+        /* HORARIOS */
         .grid-horarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
         .tarjeta { 
             background: var(--blanco); 
@@ -83,20 +85,34 @@
             border-radius: 8px; 
         }
         .tarjeta h3 { color: var(--dorado-fuerte); font-size: 1.5rem; font-weight: 900; margin: 0; }
-        .tarjeta .hora { font-size: 2.5rem; font-weight: 900; color: var(--negro-puro); display: block; margin: 15px 0; }
-        .tarjeta p { font-weight: 700; font-size: 1.1rem; margin: 0; }
+        .tarjeta .hora { font-size: 2.5rem; font-weight: 900; display: block; margin: 15px 0; }
+        .tarjeta p { font-weight: 700; font-size: 1.1rem; }
+
+        /* BOTÓN YOUTUBE */
+        .btn-youtube {
+            display: inline-block;
+            background-color: var(--rojo-yt);
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+        }
+        .btn-youtube:hover { transform: scale(1.05); background-color: #cc0000; }
 
         /* MAPA */
         .mapa-contenedor { width: 100%; height: 450px; border: 4px solid var(--dorado-fuerte); margin-top: 30px; }
         iframe { width: 100%; height: 100%; border: 0; }
 
-        /* FOOTER FINAL */
+        /* FOOTER */
         footer { background-color: var(--negro-puro); color: var(--blanco); padding: 80px 20px; text-align: center; }
         .mensaje-final { font-family: 'Cinzel', serif; color: var(--dorado); font-size: 2.5rem; font-weight: 700; margin-bottom: 40px; }
-        .footer-info { font-size: 1.2rem; font-weight: 700; line-height: 2; color: #ddd; }
 
-        /* WhatsApp */
-        .float-wa { position: fixed; bottom: 30px; left: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 2000; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+        .float-wa { position: fixed; bottom: 30px; left: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 2000; }
     </style>
 </head>
 <body>
@@ -112,17 +128,20 @@
 
     <nav>
         <a href="#quienes">Quiénes Somos</a>
-        <a href="#creemos">Qué Creemos</a>
         <a href="#horarios">Horarios</a>
         <a href="#donde">Ubicación</a>
+        <a href="https://www.youtube.com/@comunidadcristianacasadedi4850" target="_blank" class="nav-yt">YouTube</a>
     </nav>
 
     <section class="contenedor" id="quienes">
         <h2 class="titulo-seccion">Quiénes Somos</h2>
-        <div class="texto-quienes">
-            <p>Somos una iglesia que reconoce a <span class="resaltado">Jesucristo como el centro de nuestra fe</span> y el Señor de nuestras vidas. Creemos que Dios sigue transformando corazones hoy, y confiamos en la obra del Espíritu Santo.</p>
-            <p>En C.C. Casa de Dios Valdemoro abrimos nuestras puertas a todas las personas. Somos una <span class="resaltado">familia espiritual</span> donde adoramos juntos, crecemos juntos y servimos juntos.</p>
-            <p style="color: var(--dorado-fuerte); margin-top: 30px;">Te invitamos a conocernos, participar en nuestros cultos y caminar con nosotros en esta vida de fe.</p>
+        <div class="texto-principal">
+            <p>Somos una iglesia que reconoce a <span class="resaltado">Jesucristo como el centro de nuestra fe</span> y el Señor de nuestras vidas. Creemos que Dios sigue transformando corazones hoy.</p>
+            <p>En C.C. Casa de Dios Valdemoro somos una <span class="resaltado">familia espiritual</span> donde adoramos juntos, crecemos juntos y servimos juntos.</p>
+            
+            <a href="https://www.youtube.com/@comunidadcristianacasadedi4850" target="_blank" class="btn-youtube">
+                VER CULTOS EN YOUTUBE
+            </a>
         </div>
     </section>
 
@@ -134,60 +153,35 @@
                 <p>Reconocemos a Jesucristo como el centro de nuestra fe y el único Señor de nuestras vidas.</p>
             </div>
             <div class="item-fe">
-                <h3>La Palabra de Dios</h3>
-                <p>La Biblia es nuestra autoridad y fundamento infalible para la fe y la conducta diaria.</p>
-            </div>
-            <div class="item-fe">
-                <h3>La Familia</h3>
-                <p>Creemos en la importancia de la comunidad y el apoyo mutuo como cuerpo de Cristo.</p>
+                <h3>Autoridad Bíblica</h3>
+                <p>La Biblia es nuestra guía infalible de fe y conducta.</p>
             </div>
         </div>
     </section>
 
     <section class="contenedor" id="horarios">
-        <h2 class="titulo-seccion">Nuestras Reuniones</h2>
+        <h2 class="titulo-seccion">Horarios</h2>
         <div class="grid-horarios">
-            <div class="tarjeta">
-                <h3>DOMINGOS</h3>
-                <span class="hora">11:30h</span>
-                <p>Culto General</p>
-            </div>
-            <div class="tarjeta">
-                <h3>JUEVES</h3>
-                <span class="hora">18:00h</span>
-                <p>Reunión de Mujeres</p>
-            </div>
-            <div class="tarjeta">
-                <h3>VIERNES</h3>
-                <span class="hora">20:00h</span>
-                <p>Reunión de Oración</p>
-            </div>
-            <div class="tarjeta">
-                <h3>SÁBADOS</h3>
-                <span class="hora">20:00h</span>
-                <p>Estudio Bíblico</p>
-            </div>
+            <div class="tarjeta"><h3>DOMINGOS</h3><span class="hora">11:30h</span><p>Culto General</p></div>
+            <div class="tarjeta"><h3>JUEVES</h3><span class="hora">18:00h</span><p>Reunión de Mujeres</p></div>
+            <div class="tarjeta"><h3>VIERNES</h3><span class="hora">20:00h</span><p>Reunión de Oración</p></div>
+            <div class="tarjeta"><h3>SÁBADOS</h3><span class="hora">20:00h</span><p>Estudio Bíblico</p></div>
         </div>
     </section>
 
     <section class="seccion-gris" id="donde">
         <div class="contenedor">
             <h2 class="titulo-seccion">Ubicación</h2>
-            <p style="text-align: center; font-size: 1.6rem; font-weight: 900; margin-bottom: 0;">Calle de las Vacas, Local 5</p>
-            <p style="text-align: center; font-size: 1.1rem; letter-spacing: 3px; color: var(--dorado-fuerte); margin-bottom: 30px;">VALDEMORO, MADRID</p>
+            <p style="text-align: center; font-size: 1.6rem; font-weight: 900;">Calle de las Vacas, Local 5 - Valdemoro</p>
             <div class="mapa-contenedor">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.231924169622!2d-3.67910402422033!3d40.19277097147717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f53109a905a5%3A0xc6c42171f25146c!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1710000000000" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.563854652281!2d-3.6792376!3d40.1910243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4220367f000001%3A0x7f0f0f0f0f0f0f0f!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1710000000000" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="mensaje-final">"AQUÍ HAY UN LUGAR PARA TI"</div>
-        <div class="footer-info">
-            <p>📞 685 110 296 | 695 841 373</p>
-            <p>✉️ cccasadedios.e@gmail.com</p>
-            <p style="margin-top: 40px; font-size: 0.9rem; color: #666; font-weight: 400;">© 2026 C.C. Casa de Dios Valdemoro</p>
-        </div>
+        <p style="font-weight: 700; font-size: 1.2rem;">📞 685 110 296 | ✉️ cccasadedios.e@gmail.com</p>
     </footer>
 
 </body>
