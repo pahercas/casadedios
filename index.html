@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -56,6 +57,9 @@
         }
         nav a { color: var(--blanco); text-decoration: none; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; padding: 10px 20px; transition: 0.3s; }
         nav a:hover { color: var(--dorado); }
+        /* Estilo especial para el enlace de YouTube en el menú */
+        .nav-youtube { color: #FF0000 !important; border: 1px solid #FF0000; border-radius: 4px; margin-left: 10px; }
+        .nav-youtube:hover { background-color: #FF0000; color: white !important; }
 
         .contenedor { padding: 80px 25px; max-width: 1100px; margin: auto; }
         .titulo-seccion { color: var(--dorado); text-align: center; font-size: 2.5rem; margin-bottom: 50px; text-transform: uppercase; }
@@ -117,6 +121,7 @@
         <a href="#creemos">Qué Creemos</a>
         <a href="#reuniones">Horarios</a>
         <a href="#donde">Ubicación</a>
+        <a href="https://www.youtube.com/@comunidadcristianacasadedi4850" target="_blank" class="nav-youtube">Canal YouTube</a>
     </nav>
 
     <section class="seccion-vision" id="vision">
@@ -124,10 +129,9 @@
             <h2 class="titulo-seccion">Nuestra Visión</h2>
             <div class="texto-vision">
                 <p>Somos una iglesia que reconoce a <span class="resaltado">Jesucristo como el centro de nuestra fe</span> y el Señor de nuestras vidas. Creemos que Dios sigue transformando corazones hoy, y confiamos en la obra del Espíritu Santo, quien guía, consuela y dirige a cada persona hacia la verdad que se encuentra en Cristo.</p>
-                <p>La Biblia es nuestra autoridad y fundamento. En ella descubrimos la voluntad de Dios, aprendemos a vivir con propósito y encontramos la esperanza que sostiene nuestra fe. Por eso dedicamos tiempo al estudio, la enseñanza y la aplicación práctica de la Palabra en nuestro día a día.</p>
-                <p>En Casa de Dios Valdemoro abrimos nuestras puertas a todas las personas, sin importar su edad, historia o procedencia. Somos una <span class="resaltado">familia espiritual</span> donde adoramos juntos, crecemos juntos y servimos juntos. Creemos que cada persona ha recibido dones y talentos únicos, y queremos ayudar a desarrollarlos para bendecir a otros y glorificar a Dios.</p>
-                <p>Nos mueve el llamado de Jesús a compartir el evangelio y a amar al prójimo con un amor práctico y sincero. Queremos ser una iglesia que acompaña, anima y refleja la luz de Cristo en nuestra comunidad.</p>
-                <p style="text-align: center; font-style: italic; margin-top: 40px; font-size: 1.4rem;" class="resaltado">Te invitamos a conocernos, participar en nuestros cultos y caminar con nosotros en esta vida de fe. Aquí hay un lugar para ti.</p>
+                <p>La Biblia es nuestra autoridad y fundamento. En ella descubrimos la voluntad de Dios, aprendemos a vivir con propósito y encontramos la esperanza que sostiene nuestra fe.</p>
+                <p>En Casa de Dios Valdemoro abrimos nuestras puertas a todas las personas, sin importar su edad, historia o procedencia. Somos una <span class="resaltado">familia espiritual</span> donde adoramos juntos, crecemos juntos y servimos juntos.</p>
+                <p style="text-align: center; font-style: italic; margin-top: 40px; font-size: 1.4rem;" class="resaltado">Te invitamos a conocernos, participar en nuestros cultos y caminar con nosotros en esta vida de fe.</p>
             </div>
         </div>
     </section>
@@ -137,11 +141,11 @@
             <h2 class="titulo-seccion">Qué Creemos</h2>
             <div class="item-fe">
                 <h3>Cristocentrismo</h3>
-                <p>Reconocemos a Jesucristo como el centro de nuestra fe y el único Señor de nuestras vidas. Creemos que Su sacrificio es la única vía de salvación y restauración.</p>
+                <p>Reconocemos a Jesucristo como el centro de nuestra fe y el único Señor de nuestras vidas.</p>
             </div>
             <div class="item-fe">
                 <h3>Autoridad de la Palabra</h3>
-                <p>La Biblia es inspirada por Dios y es nuestra regla infalible de fe y conducta. En ella basamos cada enseñanza y paso que damos como congregación.</p>
+                <p>La Biblia es inspirada por Dios y es nuestra regla infalible de fe y conducta.</p>
             </div>
         </div>
     </section>
@@ -177,12 +181,19 @@
         <div style="font-size: 1.8rem; font-weight: bold; margin-bottom: 5px;">Calle de las Vacas, Local 5</div>
         <div style="font-size: 1.2rem; color: var(--dorado); letter-spacing: 3px; margin-bottom: 30px;">VALDEMORO, MADRID</div>
         <div class="mapa-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.6273415714346!2d-3.6823!3d40.1917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDExJzMwLjEiTiAzwrA0MCc1Ni4zIlc!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.564531862145!2d-3.676641!3d40.190928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd421f11463e2717%3A0xc3f17b9b7e9b0b41!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
     <footer class="footer-impacto">
         <div class="mensaje-final">"Aquí hay un lugar para ti"</div>
+        
+        <div style="margin-bottom: 40px;">
+            <a href="https://www.youtube.com/@comunidadcristianacasadedi4850" target="_blank" style="background-color: #FF0000; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(255,0,0,0.3);">
+                SUSCRÍBETE A NUESTRO CANAL DE YOUTUBE
+            </a>
+        </div>
+
         <div class="datos-contacto">
             <p>📞 685 110 296 | 695 841 373</p>
             <p>✉️ cccasadedios.e@gmail.com</p>
