@@ -4,154 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.C. Casa de Dios Valdemoro | Una Iglesia, una Familia</title>
-    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-
     <style>
-        :root {
-            --dorado: #D4AF37;
-            --dorado-fuerte: #8B6B23;
-            --negro-puro: #000000;
-            --blanco: #ffffff;
-            --gris-claro: #f9f9f9;
-            --rojo-yt: #FF0000;
-        }
-
-        /* LETRA MÁS GRANDE PARA TODO EL CUERPO */
-        body { 
-            font-family: 'Montserrat', sans-serif; 
-            margin: 0; padding: 0; 
-            background-color: var(--blanco); 
-            color: var(--negro-puro); 
-            scroll-behavior: smooth;
-            font-size: 1.4rem; /* Letra aumentada */
-        }
-
-        .hero {
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('fondo.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
+        :root { --dorado: #D4AF37; --dorado-fuerte: #8B6B23; --negro-puro: #000000; --blanco: #ffffff; --gris-claro: #f9f9f9; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background-color: var(--blanco); color: var(--negro-puro); scroll-behavior: smooth; font-size: 1.4rem; }
+        .hero { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('fondo.jpg'); background-size: cover; background-position: center; height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
         .hero h1 { font-family: 'Cinzel', serif; font-size: 4.5rem; color: var(--dorado); margin: 0; }
         .hero p { font-size: 2rem; font-style: italic; margin-top: 10px; }
-
-        nav {
-            background-color: var(--blanco);
-            border-bottom: 3px solid var(--dorado);
-            display: flex; justify-content: center; flex-wrap: wrap;
-            padding: 20px 0; position: sticky; top: 0; z-index: 1000;
-        }
+        nav { background-color: var(--blanco); border-bottom: 3px solid var(--dorado); display: flex; justify-content: center; flex-wrap: wrap; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
         nav a { color: var(--negro-puro); text-decoration: none; font-weight: 900; padding: 15px 25px; text-transform: uppercase; font-size: 1.2rem; }
-
         .contenedor { padding: 80px 25px; max-width: 1100px; margin: auto; }
-        .titulo-seccion { 
-            color: var(--dorado-fuerte); 
-            text-align: center; 
-            font-family: 'Cinzel', serif; 
-            font-size: 3.5rem; 
-            margin-bottom: 50px; 
-        }
-
-        /* GALERÍA CON NOMBRES EXACTOS */
-        .galeria-fotos {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
-        .galeria-fotos img {
-            width: 100%;
-            max-width: 320px;
-            border: 5px solid var(--dorado);
-            border-radius: 10px;
-        }
-
-        .texto-principal { font-size: 1.6rem; line-height: 1.8; text-align: center; font-weight: 700; }
-        .resaltado { color: var(--dorado-fuerte); font-weight: 900; }
-
-        .tarjeta { 
-            background: var(--blanco); 
-            padding: 40px 20px; 
-            text-align: center; 
-            border: 3px solid var(--negro-puro); 
-            border-top: 8px solid var(--dorado-fuerte);
-            margin-bottom: 20px;
-        }
-        .tarjeta h3 { font-size: 2rem; color: var(--dorado-fuerte); }
-        .tarjeta .hora { font-size: 3rem; font-weight: 900; display: block; }
-
-        .btn-youtube {
-            display: inline-block;
-            background-color: var(--rojo-yt);
-            color: white;
-            padding: 25px 50px;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 1.5rem;
-            border-radius: 50px;
-            margin-top: 30px;
-        }
-
+        .titulo-seccion { color: var(--dorado-fuerte); text-align: center; font-family: 'Cinzel', serif; font-size: 3.5rem; margin-bottom: 50px; }
+        .galeria-fotos { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; }
+        .galeria-fotos img { width: 300px; height: 300px; object-fit: cover; border: 5px solid var(--dorado); border-radius: 10px; }
         footer { background-color: var(--negro-puro); color: var(--blanco); padding: 80px 20px; text-align: center; }
     </style>
 </head>
 <body>
-
     <header class="hero">
         <h1>C.C. CASA DE DIOS</h1>
         <p>"Nuestra Casa, Tu Casa"</p>
     </header>
-
     <nav>
         <a href="#quienes">Quiénes Somos</a>
         <a href="#fotos">Galería</a>
         <a href="#horarios">Horarios</a>
-        <a href="#donde">Ubicación</a>
     </nav>
-
     <section class="contenedor" id="quienes">
         <h2 class="titulo-seccion">Quiénes Somos</h2>
-        <div class="texto-principal">
-            <p>Somos una iglesia que reconoce a <span class="resaltado">Jesucristo como el centro de nuestra fe</span>.</p>
-            <a href="https://www.youtube.com/@comunidadcristianacasadedi4850" target="_blank" class="btn-youtube">VER YOUTUBE</a>
-        </div>
+        <p style="text-align:center; font-weight:bold;">Somos una iglesia que reconoce a Jesucristo como el centro de nuestra fe.</p>
     </section>
-
     <section id="fotos" style="background-color: var(--gris-claro); padding: 60px 0;">
         <div class="contenedor">
             <h2 class="titulo-seccion">Nuestra Galería</h2>
             <div class="galeria-fotos">
-                <img src="imag 1.jpg" alt="Foto 1">
-                <img src="imag 2.JPG" alt="Foto 2">
-                <img src="imag 3.jpg" alt="Foto 3">
+                <img src="imag 1.jpg" alt="Local">
+                <img src="imag 2.JPG" alt="Sillas">
+                <img src="imag 3.jpg" alt="Reunión">
             </div>
         </div>
     </section>
-
     <section class="contenedor" id="horarios">
         <h2 class="titulo-seccion">Horarios</h2>
-        <div class="tarjeta"><h3>DOMINGOS</h3><span class="hora">11:30h</span><p>Culto General</p></div>
-        <div class="tarjeta"><h3>VIERNES</h3><span class="hora">20:00h</span><p>Reunión de Oración</p></div>
-    </section>
-
-    <section id="fotos" style="background-color: #f9f9f9; padding: 40px 0; text-align: center;">
-        <h2 style="color: #8B6B23; font-family: 'Cinzel', serif; font-size: 2.5rem;">NUESTRA GALERÍA</h2>
-        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
-            <img src="imag 1.jpg" style="width: 300px; border: 5px solid #D4AF37; border-radius: 10px;">
-            <img src="imag 2.JPG" style="width: 300px; border: 5px solid #D4AF37; border-radius: 10px;">
-            <img src="imag 3.jpg" style="width: 300px; border: 5px solid #D4AF37; border-radius: 10px;">
+        <div style="text-align: center;">
+            <p><strong>DOMINGOS:</strong> 11:30h - Culto General</p>
+            <p><strong>VIERNES:</strong> 20:00h - Reunión de Oración</p>
         </div>
     </section>
     <footer>
         <div style="font-size: 2.5rem; color: var(--dorado); font-family: 'Cinzel';">"AQUÍ HAY UN LUGAR PARA TI"</div>
     </footer>
-
 </body>
 </html>
