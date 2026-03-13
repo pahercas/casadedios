@@ -73,10 +73,17 @@
         .item-fe h3 { color: var(--dorado-claro); font-size: 1.8rem; margin-bottom: 15px; }
         .item-fe p { font-size: 1.3rem; font-weight: 300; line-height: 1.8; color: #ddd; }
 
-        /* Horarios */
+        /* Horarios con Recuadros Dorados */
         .grid-horarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-        .card-reunion { background: #111; padding: 40px 15px; text-align: center; border: 1px solid #333; transition: 0.4s; border-radius: 4px; }
-        .card-reunion:hover { border-color: var(--dorado); transform: translateY(-5px); }
+        .card-reunion { 
+            background: #111; 
+            padding: 40px 15px; 
+            text-align: center; 
+            border: 1px solid var(--dorado); 
+            transition: 0.4s; 
+            border-radius: 4px; 
+        }
+        .card-reunion:hover { background: #1a1a1a; transform: translateY(-5px); }
         .card-reunion h3 { color: var(--dorado); font-size: 1.4rem; margin-bottom: 10px; }
         .card-reunion .hora { font-size: 2.5rem; font-weight: 700; color: var(--blanco); display: block; margin: 10px 0; }
 
@@ -147,7 +154,7 @@
                 <span class="hora">11:30h</span>
                 <p>Culto General</p>
             </div>
-            <div class="card-reunion" style="border-color: var(--dorado);">
+            <div class="card-reunion">
                 <h3>JUEVES</h3>
                 <span class="hora">18:00h</span>
                 <p>Reunión de Mujeres</p>
@@ -170,7 +177,7 @@
         <div style="font-size: 1.8rem; font-weight: bold; margin-bottom: 5px;">Calle de las Vacas, Local 5</div>
         <div style="font-size: 1.2rem; color: var(--dorado); letter-spacing: 3px; margin-bottom: 30px;">VALDEMORO, MADRID</div>
         <div class="mapa-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.4137257912345!2d-3.682613!3d40.191415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f5311e619197%3A0x6e9a0b0d0d0d0d0d!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.6273415714346!2d-3.6823!3d40.1917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDExJzMwLjEiTiAzwrA0MCc1Ni4zIlc!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
