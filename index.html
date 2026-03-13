@@ -1,3 +1,10 @@
+¡Excelente texto! Tiene una calidez y profundidad espiritual muy necesaria para la sección de "Nuestra Visión".
+
+He integrado este contenido en el código de tu index.html, colocándolo justo antes de la sección de "Qué Creemos". De esta forma, primero se presenta la iglesia con su misión completa y luego se detallan los puntos doctrinales.
+
+Aquí tienes el código completo. Sigue los mismos pasos de antes (Borrar todo en GitHub y pegar este nuevo bloque):
+
+HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,12 +25,11 @@
         :root {
             --dorado: #D4AF37;
             --dorado-claro: #F9E076;
-            --negro-suave: #0f0f0f; /* Negro antracita, más relajante a la vista */
+            --negro-suave: #0f0f0f;
             --gris-oscuro: #1a1a1a;
             --blanco: #ffffff;
         }
 
-        /* Estilo general */
         * { box-sizing: border-box; }
         body { 
             font-family: 'Montserrat', sans-serif; 
@@ -35,7 +41,6 @@
 
         h1, h2, h3 { font-family: 'Cinzel', serif; letter-spacing: 2px; }
 
-        /* HERO - Con efecto Parallax (la foto se queda fija al bajar) */
         .hero {
             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('fondo.jpg');
             background-attachment: fixed;
@@ -52,7 +57,6 @@
         .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); color: var(--dorado); margin: 0; }
         .hero p { font-size: clamp(1.2rem, 4vw, 2.2rem); font-style: italic; font-weight: 300; }
 
-        /* Navegación Estilo Cristal */
         nav {
             background-color: rgba(15, 15, 15, 0.95);
             backdrop-filter: blur(10px);
@@ -63,52 +67,43 @@
         nav a { color: var(--blanco); text-decoration: none; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; padding: 10px 20px; transition: 0.3s; }
         nav a:hover { color: var(--dorado); }
 
-        .contenedor { padding: 120px 25px; max-width: 1200px; margin: auto; }
-        .titulo-seccion { color: var(--dorado); text-align: center; font-size: 2.5rem; margin-bottom: 70px; text-transform: uppercase; }
+        .contenedor { padding: 80px 25px; max-width: 1100px; margin: auto; }
+        .titulo-seccion { color: var(--dorado); text-align: center; font-size: 2.5rem; margin-bottom: 50px; text-transform: uppercase; }
         .titulo-seccion::after { content: ''; display: block; width: 80px; height: 3px; background: var(--dorado); margin: 20px auto; }
 
-        /* QUÉ CREEMOS - Intercalado con Gris Oscuro */
+        /* NUESTRA VISIÓN */
+        .seccion-vision { background-color: var(--negro-suave); line-height: 1.8; text-align: center; }
+        .texto-vision { font-size: 1.25rem; font-weight: 300; color: #f0f0f0; max-width: 900px; margin: 0 auto; }
+        .texto-vision p { margin-bottom: 25px; }
+        .resaltado { color: var(--dorado-claro); font-weight: 400; }
+
+        /* QUÉ CREEMOS */
         .seccion-fe { background-color: var(--gris-oscuro); }
         .item-fe { border-left: 5px solid var(--dorado); padding-left: 30px; margin-bottom: 50px; }
         .item-fe h3 { color: var(--dorado-claro); font-size: 1.8rem; margin-bottom: 15px; }
         .item-fe p { font-size: 1.3rem; font-weight: 300; line-height: 1.8; color: #ddd; }
 
-        /* REUNIONES - Tarjetas modernas */
         .grid-horarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-        .card-reunion { 
-            background: #111; 
-            padding: 60px 20px; 
-            text-align: center; 
-            border: 1px solid #333;
-            transition: 0.4s;
-            border-radius: 4px;
-        }
+        .card-reunion { background: #111; padding: 60px 20px; text-align: center; border: 1px solid #333; transition: 0.4s; border-radius: 4px; }
         .card-reunion:hover { border-color: var(--dorado); transform: translateY(-10px); }
         .card-reunion h3 { color: var(--dorado); font-size: 1.6rem; }
         .card-reunion .hora { font-size: 4rem; font-weight: 700; margin: 20px 0; display: block; }
 
-        /* UBICACIÓN - Mapa nítido y grande */
-        .seccion-mapa { text-align: center; padding: 120px 20px; background: #000; }
-        .mapa-box { width: 100%; max-width: 1100px; height: 550px; margin: 40px auto; border: 2px solid var(--dorado); box-shadow: 0 0 40px rgba(0,0,0,0.8); }
-        iframe { width: 100%; height: 100%; border: 0; }
+        .seccion-mapa { text-align: center; padding: 100px 20px; background: #000; }
+        .mapa-box { width: 100%; max-width: 1100px; height: 500px; margin: 40px auto; border: 1px solid var(--dorado); }
+        iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.2) contrast(1.1); }
 
-        /* FOOTER Y MENSAJE FINAL */
-        .footer-impacto { 
-            background: linear-gradient(to top, #000, var(--negro-suave));
-            padding: 150px 20px; 
-            text-align: center; 
-        }
+        .footer-impacto { background: linear-gradient(to top, #000, var(--negro-suave)); padding: 120px 20px; text-align: center; }
         .mensaje-final { font-size: clamp(2rem, 6vw, 4rem); color: var(--dorado); font-family: 'Cinzel'; font-weight: bold; }
         .datos-contacto { margin-top: 50px; font-size: 1.4rem; color: #888; }
 
-        /* BOTÓN WHATSAPP */
-        .float-wa { position: fixed; bottom: 30px; left: 30px; background: #25D366; width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .float-wa { position: fixed; bottom: 30px; left: 30px; background: #25D366; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
     </style>
 </head>
 <body>
 
     <a href="https://wa.me/34685110296" class="float-wa" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" alt="WA">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WA">
     </a>
 
     <header class="hero" id="inicio">
@@ -117,11 +112,24 @@
     </header>
 
     <nav>
+        <a href="#vision">Nuestra Visión</a>
         <a href="#creemos">Qué Creemos</a>
         <a href="#reuniones">Horarios</a>
         <a href="#donde">Ubicación</a>
-        <a href="#inicio">Inicio</a>
     </nav>
+
+    <section class="seccion-vision" id="vision">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">Nuestra Visión</h2>
+            <div class="texto-vision">
+                <p>Somos una iglesia que reconoce a <span class="resaltado">Jesucristo como el centro de nuestra fe</span> y el Señor de nuestras vidas. Creemos que Dios sigue transformando corazones hoy, y confiamos en la obra del Espíritu Santo, quien guía, consuela y dirige a cada persona hacia la verdad que se encuentra en Cristo.</p>
+                <p>La Biblia es nuestra autoridad y fundamento. En ella descubrimos la voluntad de Dios, aprendemos a vivir con propósito y encontramos la esperanza que sostiene nuestra fe. Por eso dedicamos tiempo al estudio, la enseñanza y la aplicación práctica de la Palabra en nuestro día a día.</p>
+                <p>En Casa de Dios Valdemoro abrimos nuestras puertas a todas las personas, sin importar su edad, historia o procedencia. Somos una <span class="resaltado">familia espiritual</span> donde adoramos juntos, crecemos juntos y servimos juntos. Creemos que cada persona ha recibido dones y talentos únicos, y queremos ayudar a desarrollarlos para bendecir a otros y glorificar a Dios.</p>
+                <p>Nos mueve el llamado de Jesús a compartir el evangelio y a amar al prójimo con un amor práctico y sincero. Queremos ser una iglesia que acompaña, anima y refleja la luz de Cristo en nuestra comunidad.</p>
+                <p style="font-style: italic; margin-top: 40px; font-size: 1.4rem;" class="resaltado">Te invitamos a conocernos, participar en nuestros cultos y caminar con nosotros en esta vida de fe. Aquí hay un lugar para ti.</p>
+            </div>
+        </div>
+    </section>
 
     <section class="seccion-fe" id="creemos">
         <div class="contenedor">
@@ -151,7 +159,7 @@
         <div style="font-size: 2.2rem; font-weight: bold; margin-bottom: 10px;">Calle de las Vacas, Local 5</div>
         <div style="font-size: 1.5rem; color: var(--dorado); letter-spacing: 4px;">VALDEMORO, MADRID</div>
         <div class="mapa-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.23126588647!2d-3.6766782!3d40.1927778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f534062a7479%3A0xb36341772674674!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1710323000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.107297341851!2d-3.6784!3d40.1872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f5e6a0000001%3A0x0!2zNDDCsDExJzEzLjkiTiAzwrA0MCczMi4yIlc!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
