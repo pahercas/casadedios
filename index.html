@@ -17,6 +17,7 @@
         .titulo-seccion { color: var(--dorado-fuerte); text-align: center; font-family: 'Cinzel', serif; font-size: 3.5rem; margin-bottom: 50px; }
         .galeria-fotos { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; }
         .galeria-fotos img { width: 300px; height: 300px; object-fit: cover; border: 5px solid var(--dorado); border-radius: 10px; }
+        .mapa-contenedor { width: 100%; height: 450px; border: 0; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         footer { background-color: var(--negro-puro); color: var(--blanco); padding: 80px 20px; text-align: center; }
     </style>
 </head>
@@ -25,15 +26,19 @@
         <h1>C.C. CASA DE DIOS</h1>
         <p>"Nuestra Casa, Tu Casa"</p>
     </header>
+
     <nav>
         <a href="#quienes">Quiénes Somos</a>
         <a href="#fotos">Galería</a>
         <a href="#horarios">Horarios</a>
+        <a href="#ubicacion">Ubicación</a>
     </nav>
+
     <section class="contenedor" id="quienes">
         <h2 class="titulo-seccion">Quiénes Somos</h2>
-        <p style="text-align:center; font-weight:bold;">Somos una iglesia que reconoce a Jesucristo como el centro de nuestra fe.</p>
+        <p style="text-align:center; font-weight:bold;">Somos una iglesia que reconoce a Jesucristo como el centro de nuestra fe y nos reunimos para adorar y crecer juntos.</p>
     </section>
+
     <section id="fotos" style="background-color: var(--gris-claro); padding: 60px 0;">
         <div class="contenedor">
             <h2 class="titulo-seccion">Nuestra Galería</h2>
@@ -44,15 +49,26 @@
             </div>
         </div>
     </section>
+
     <section class="contenedor" id="horarios">
         <h2 class="titulo-seccion">Horarios</h2>
-        <div style="text-align: center;">
+        <div style="text-align: center; line-height: 2;">
             <p><strong>DOMINGOS:</strong> 11:30h - Culto General</p>
             <p><strong>VIERNES:</strong> 20:00h - Reunión de Oración</p>
         </div>
     </section>
+
+    <section class="contenedor" id="ubicacion">
+        <h2 class="titulo-seccion">Dónde Estamos</h2>
+        <div class="mapa-contenedor">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.44293847844!2d-3.6811!3d40.1895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f39f8f7c9e1d%3A0x6b7a38!2sC.%20de%20la%20Vanguardia%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <p style="text-align:center; margin-top:20px;">Calle de la Vanguardia, Valdemoro, Madrid.</p>
+    </section>
+
     <footer>
-        <div style="font-size: 2.5rem; color: var(--dorado); font-family: 'Cinzel';">"AQUÍ HAY UN LUGAR PARA TI"</div>
+        <div style="font-size: 2.5rem; color: var(--dorado); font-family: 'Cinzel'; margin-bottom: 20px;">"AQUÍ HAY UN LUGAR PARA TI"</div>
+        <p>Email: info@casadediosvaldemoro.es</p>
     </footer>
 </body>
 </html>
