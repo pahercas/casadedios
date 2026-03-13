@@ -5,13 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>C.C. Casa de Dios Valdemoro | Una Iglesia, una Familia</title>
-    <meta name="description" content="Comunidad Cristiana en Valdemoro, Madrid. Te invitamos a nuestros cultos los domingos 11:30h. Un lugar para encontrar fe, esperanza y familia.">
-    <meta name="keywords" content="Iglesia Valdemoro, Casa de Dios, Cristiano Madrid, Biblia, Cultos">
+    <meta name="description" content="Comunidad Cristiana en Valdemoro, Madrid. Te invitamos a nuestros cultos. Un lugar para encontrar fe, esperanza y familia.">
     
-    <meta property="og:title" content="C.C. Casa de Dios Valdemoro">
-    <meta property="og:description" content="Aquí hay un lugar para ti. ¡Ven a visitarnos!">
-    <meta property="og:image" content="fondo.jpg">
-
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
@@ -34,12 +29,13 @@
 
         h1, h2, h3 { font-family: 'Cinzel', serif; letter-spacing: 2px; }
 
+        /* Encabezado Principal */
         .hero {
             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('fondo.jpg');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
-            height: 95vh;
+            height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -48,8 +44,9 @@
             padding: 20px;
         }
         .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); color: var(--dorado); margin: 0; }
-        .hero p { font-size: clamp(1.2rem, 4vw, 2.2rem); font-style: italic; font-weight: 300; }
+        .hero p { font-size: clamp(1.2rem, 4vw, 2.2rem); font-style: italic; font-weight: 300; margin-top: 10px; }
 
+        /* Navegación */
         nav {
             background-color: rgba(15, 15, 15, 0.95);
             backdrop-filter: blur(10px);
@@ -64,39 +61,43 @@
         .titulo-seccion { color: var(--dorado); text-align: center; font-size: 2.5rem; margin-bottom: 50px; text-transform: uppercase; }
         .titulo-seccion::after { content: ''; display: block; width: 80px; height: 3px; background: var(--dorado); margin: 20px auto; }
 
-        /* NUESTRA VISIÓN */
+        /* Nuestra Visión */
         .seccion-vision { background-color: var(--negro-suave); line-height: 1.8; text-align: center; }
-        .texto-vision { font-size: 1.25rem; font-weight: 300; color: #f0f0f0; max-width: 900px; margin: 0 auto; }
+        .texto-vision { font-size: 1.25rem; font-weight: 300; color: #f0f0f0; max-width: 950px; margin: 0 auto; text-align: justify; }
         .texto-vision p { margin-bottom: 25px; }
         .resaltado { color: var(--dorado-claro); font-weight: 400; }
 
-        /* QUÉ CREEMOS */
+        /* Qué Creemos */
         .seccion-fe { background-color: var(--gris-oscuro); }
         .item-fe { border-left: 5px solid var(--dorado); padding-left: 30px; margin-bottom: 50px; }
         .item-fe h3 { color: var(--dorado-claro); font-size: 1.8rem; margin-bottom: 15px; }
         .item-fe p { font-size: 1.3rem; font-weight: 300; line-height: 1.8; color: #ddd; }
 
-        .grid-horarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-        .card-reunion { background: #111; padding: 60px 20px; text-align: center; border: 1px solid #333; transition: 0.4s; border-radius: 4px; }
-        .card-reunion:hover { border-color: var(--dorado); transform: translateY(-10px); }
-        .card-reunion h3 { color: var(--dorado); font-size: 1.6rem; }
-        .card-reunion .hora { font-size: 4rem; font-weight: 700; margin: 20px 0; display: block; }
+        /* Horarios */
+        .grid-horarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .card-reunion { background: #111; padding: 40px 15px; text-align: center; border: 1px solid #333; transition: 0.4s; border-radius: 4px; }
+        .card-reunion:hover { border-color: var(--dorado); transform: translateY(-5px); }
+        .card-reunion h3 { color: var(--dorado); font-size: 1.4rem; margin-bottom: 10px; }
+        .card-reunion .hora { font-size: 2.5rem; font-weight: 700; color: var(--blanco); display: block; margin: 10px 0; }
 
-        .seccion-mapa { text-align: center; padding: 100px 20px; background: #000; }
-        .mapa-box { width: 100%; max-width: 1100px; height: 500px; margin: 40px auto; border: 1px solid var(--dorado); }
-        iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.2) contrast(1.1); }
+        /* Ubicación */
+        .seccion-mapa { text-align: center; padding: 80px 20px; background: #000; }
+        .mapa-box { width: 100%; max-width: 1100px; height: 450px; margin: 40px auto; border: 1px solid var(--dorado); }
+        iframe { width: 100%; height: 100%; border: 0; }
 
-        .footer-impacto { background: linear-gradient(to top, #000, var(--negro-suave)); padding: 120px 20px; text-align: center; }
-        .mensaje-final { font-size: clamp(2rem, 6vw, 4rem); color: var(--dorado); font-family: 'Cinzel'; font-weight: bold; }
-        .datos-contacto { margin-top: 50px; font-size: 1.4rem; color: #888; }
+        /* Footer */
+        .footer-impacto { background: linear-gradient(to top, #000, var(--negro-suave)); padding: 80px 20px; text-align: center; }
+        .mensaje-final { font-size: clamp(1.8rem, 5vw, 3rem); color: var(--dorado); font-family: 'Cinzel'; font-weight: bold; margin-bottom: 30px; }
+        .datos-contacto { font-size: 1.2rem; color: #bbb; line-height: 2; }
 
-        .float-wa { position: fixed; bottom: 30px; left: 30px; background: #25D366; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        /* WhatsApp Flotante */
+        .float-wa { position: fixed; bottom: 30px; left: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
     </style>
 </head>
 <body>
 
     <a href="https://wa.me/34685110296" class="float-wa" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WA">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
     </a>
 
     <header class="hero" id="inicio">
@@ -119,7 +120,7 @@
                 <p>La Biblia es nuestra autoridad y fundamento. En ella descubrimos la voluntad de Dios, aprendemos a vivir con propósito y encontramos la esperanza que sostiene nuestra fe. Por eso dedicamos tiempo al estudio, la enseñanza y la aplicación práctica de la Palabra en nuestro día a día.</p>
                 <p>En Casa de Dios Valdemoro abrimos nuestras puertas a todas las personas, sin importar su edad, historia o procedencia. Somos una <span class="resaltado">familia espiritual</span> donde adoramos juntos, crecemos juntos y servimos juntos. Creemos que cada persona ha recibido dones y talentos únicos, y queremos ayudar a desarrollarlos para bendecir a otros y glorificar a Dios.</p>
                 <p>Nos mueve el llamado de Jesús a compartir el evangelio y a amar al prójimo con un amor práctico y sincero. Queremos ser una iglesia que acompaña, anima y refleja la luz de Cristo en nuestra comunidad.</p>
-                <p style="font-style: italic; margin-top: 40px; font-size: 1.4rem;" class="resaltado">Te invitamos a conocernos, participar en nuestros cultos y caminar con nosotros en esta vida de fe. Aquí hay un lugar para ti.</p>
+                <p style="text-align: center; font-style: italic; margin-top: 40px; font-size: 1.4rem;" class="resaltado">Te invitamos a conocernos, participar en nuestros cultos y caminar con nosotros en esta vida de fe. Aquí hay un lugar para ti.</p>
             </div>
         </div>
     </section>
@@ -129,11 +130,11 @@
             <h2 class="titulo-seccion">Qué Creemos</h2>
             <div class="item-fe">
                 <h3>Cristocentrismo</h3>
-                <p>Reconocemos a Jesucristo como el centro de nuestra fe y el único Señor de nuestras vidas. Dios sigue transformando corazones hoy.</p>
+                <p>Reconocemos a Jesucristo como el centro de nuestra fe y el único Señor de nuestras vidas. Creemos que Su sacrificio es la única vía de salvación y restauración.</p>
             </div>
             <div class="item-fe">
                 <h3>Autoridad de la Palabra</h3>
-                <p>La Biblia es nuestra autoridad suprema y el fundamento sobre el cual construimos nuestra vida diaria y nuestra familia espiritual.</p>
+                <p>La Biblia es inspirada por Dios y es nuestra regla infalible de fe y conducta. En ella basamos cada enseñanza y paso que damos como congregación.</p>
             </div>
         </div>
     </section>
@@ -141,18 +142,35 @@
     <section class="contenedor" id="reuniones">
         <h2 class="titulo-seccion">Nuestras Reuniones</h2>
         <div class="grid-horarios">
-            <div class="card-reunion"><h3>DOMINGOS</h3><span class="hora">11:30h</span><p>Culto General</p></div>
-            <div class="card-reunion"><h3>VIERNES</h3><span class="hora">20:00h</span><p>Reunión de Oración</p></div>
-            <div class="card-reunion"><h3>SÁBADOS</h3><span class="hora">20:00h</span><p>Estudio Bíblico</p></div>
+            <div class="card-reunion">
+                <h3>DOMINGOS</h3>
+                <span class="hora">11:30h</span>
+                <p>Culto General</p>
+            </div>
+            <div class="card-reunion" style="border-color: var(--dorado);">
+                <h3>JUEVES</h3>
+                <span class="hora">18:00h</span>
+                <p>Reunión de Mujeres</p>
+            </div>
+            <div class="card-reunion">
+                <h3>VIERNES</h3>
+                <span class="hora">20:00h</span>
+                <p>Reunión de Oración</p>
+            </div>
+            <div class="card-reunion">
+                <h3>SÁBADOS</h3>
+                <span class="hora">20:00h</span>
+                <p>Estudio Bíblico</p>
+            </div>
         </div>
     </section>
 
     <section class="seccion-mapa" id="donde">
         <h2 class="titulo-seccion">Ubicación</h2>
-        <div style="font-size: 2.2rem; font-weight: bold; margin-bottom: 10px;">Calle de las Vacas, Local 5</div>
-        <div style="font-size: 1.5rem; color: var(--dorado); letter-spacing: 4px;">VALDEMORO, MADRID</div>
+        <div style="font-size: 1.8rem; font-weight: bold; margin-bottom: 5px;">Calle de las Vacas, Local 5</div>
+        <div style="font-size: 1.2rem; color: var(--dorado); letter-spacing: 3px; margin-bottom: 30px;">VALDEMORO, MADRID</div>
         <div class="mapa-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.107297341851!2d-3.6784!3d40.1872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f5e6a0000001%3A0x0!2zNDDCsDExJzEzLjkiTiAzwrA0MCczMi4yIlc!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.4137257912345!2d-3.682613!3d40.191415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f5311e619197%3A0x6e9a0b0d0d0d0d0d!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 
@@ -161,8 +179,8 @@
         <div class="datos-contacto">
             <p>📞 685 110 296 | 695 841 373</p>
             <p>✉️ cccasadedios.e@gmail.com</p>
+            <p style="margin-top: 40px; font-size: 0.9rem; color: #555;">© 2026 C.C. Casa de Dios Valdemoro</p>
         </div>
-        <p style="margin-top: 100px; color: #333; font-size: 0.8rem;">© 2026 C.C. Casa de Dios Valdemoro</p>
     </footer>
 
 </body>
