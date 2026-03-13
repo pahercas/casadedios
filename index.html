@@ -8,51 +8,35 @@
     <style>
         :root { --dorado: #D4AF37; --dorado-fuerte: #8B6B23; --negro-puro: #000000; --blanco: #ffffff; --gris-claro: #f9f9f9; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background-color: var(--blanco); color: var(--negro-puro); scroll-behavior: smooth; font-size: 1.5rem; }
-        
-        /* FONDO PRINCIPAL */
         .hero { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('fondo.jpg'); background-size: cover; background-position: center; height: 65vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; border-bottom: 5px solid var(--dorado); }
-        .hero h1 { font-family: 'Cinzel', serif; font-size: 4.5rem; color: var(--dorado); margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: 4.5rem; color: var(--dorado); margin: 0; }
         .hero p { font-size: 2.2rem; font-style: italic; margin-top: 10px; }
-
         nav { background-color: var(--blanco); border-bottom: 3px solid var(--dorado); display: flex; justify-content: center; flex-wrap: wrap; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
         nav a { color: var(--negro-puro); text-decoration: none; font-weight: 900; padding: 15px 25px; text-transform: uppercase; font-size: 1.2rem; }
-
         .contenedor { padding: 60px 25px; max-width: 1100px; margin: auto; }
         .titulo-seccion { color: var(--dorado-fuerte); text-align: center; font-family: 'Cinzel', serif; font-size: 3.5rem; margin-bottom: 40px; }
-
-        /* GALERÍA */
         .galeria-fotos { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; }
         .galeria-fotos img { width: 320px; height: 320px; object-fit: cover; border: 5px solid var(--dorado); border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-
-        /* DATOS CONTACTO */
         .info-contacto { text-align: center; background: var(--gris-claro); padding: 50px 20px; border-radius: 20px; border: 2px solid var(--dorado); margin: 40px 0; }
-        .boton-whatsapp { background-color: #25D366; color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 20px; font-size: 1.4rem; }
-
-        /* MAPA */
         .mapa-contenedor { width: 100%; height: 450px; border: 5px solid var(--dorado); border-radius: 20px; overflow: hidden; margin-top: 30px; }
-
         footer { background-color: var(--negro-puro); color: var(--blanco); padding: 80px 20px; text-align: center; }
     </style>
 </head>
 <body>
-
     <header class="hero">
         <h1>C.C. CASA DE DIOS</h1>
         <p>"Nuestra Casa, Tu Casa"</p>
     </header>
-
     <nav>
         <a href="#quienes">Nosotros</a>
         <a href="#fotos">Galería</a>
         <a href="#horarios">Horarios</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#contacto">Ubicación</a>
     </nav>
-
     <section class="contenedor" id="quienes">
         <h2 class="titulo-seccion">Quiénes Somos</h2>
-        <p style="text-align:center; line-height: 1.6;">Somos una iglesia evangélica que reconoce a Jesucristo como el centro de nuestra fe. Una familia donde todos son bienvenidos para adorar a Dios.</p>
+        <p style="text-align:center; font-weight:bold;">Somos una iglesia evangélica en Valdemoro, una familia para adorar a Dios.</p>
     </section>
-
     <section id="fotos" style="background-color: var(--gris-claro); padding: 60px 0;">
         <div class="contenedor">
             <h2 class="titulo-seccion">Nuestra Galería</h2>
@@ -63,16 +47,22 @@
             </div>
         </div>
     </section>
-
     <section class="contenedor" id="horarios">
-        <h2 class="titulo-seccion">Horarios y Ubicación</h2>
+        <h2 class="titulo-seccion">Horarios y Contacto</h2>
         <div class="info-contacto">
             <p><strong>DOMINGOS:</strong> 11:30h - Culto General</p>
-            <p><strong>VIERNES:</strong> 20:00h - Reunión de Oración</p>
-            <hr style="border: 1px solid var(--dorado); width: 50%; margin: 30px auto;">
+            <p><strong>VIERNES:</strong> 20:00h - Oración</p>
+            <hr style="border: 1px solid var(--dorado); width: 50%; margin: 20px auto;">
             <p><strong>DIRECCIÓN:</strong> Calle de la Vanguardia, 7 (Valdemoro)</p>
-            <p><strong>TELÉFONO:</strong> 600 000 000</p>
-            <a href="https://wa.me/34600000000" class="boton-whatsapp">Escribir por WhatsApp</a>
+            <p><strong>TELÉFONO:</strong> Su número aquí</p>
         </div>
-
         <div id="contacto" class="mapa-contenedor">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.84!2d-3.67!3d40.18!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDEwJzQ4LjAiTiAzwrA0MCcxMi4wIlc!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <footer>
+        <div style="font-size: 2.5rem; color: var(--dorado); font-family: 'Cinzel';">"AQUÍ HAY UN LUGAR PARA TI"</div>
+        <p style="margin-top:20px;">Email: info@casadediosvaldemoro.es</p>
+    </footer>
+</body>
+</html>
