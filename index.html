@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,34 +7,78 @@
     <title>C.C. Casa de Dios de Valdemoro | Una Iglesia, una Familia</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root { --dorado: #D4AF37; --dorado-fuerte: #8B6B23; --negro-puro: #000000; --blanco: #ffffff; --gris-claro: #f9f9f9; --rojo-yt: #FF0000; }
+        :root { 
+            --dorado: #D4AF37; 
+            --dorado-fuerte: #8B6B23; 
+            --negro-puro: #000000; 
+            --blanco: #ffffff; 
+            --gris-claro: #f9f9f9; 
+            --rojo-yt: #FF0000; 
+            --tiktok-color: #010101;
+        }
         * { box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background-color: var(--blanco); color: var(--negro-puro); scroll-behavior: smooth; line-height: 1.5; }
-        .hero { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('fondo.jpg'); background-size: cover; background-position: center; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px; }
+        
+        /* Hero Section - Sin Logo, Solo Texto */
+        .hero { 
+            background-color: var(--negro-puro); 
+            height: 45vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            color: white; 
+            padding: 20px;
+            border-bottom: 4px solid var(--dorado);
+        }
         .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 8vw, 3.5rem); color: var(--dorado); margin: 0; font-weight: 700; }
         .hero p { font-size: clamp(1.1rem, 4vw, 1.6rem); font-style: italic; margin-top: 10px; font-weight: 800; color: #ffffff !important; }
+        
+        /* Navegación */
         nav { background-color: var(--blanco); border-bottom: 3px solid var(--dorado); display: flex; justify-content: center; flex-wrap: wrap; padding: 5px; position: sticky; top: 0; z-index: 1000; }
         nav a { color: var(--negro-puro); text-decoration: none; font-weight: 900; padding: 8px 12px; text-transform: uppercase; font-size: 0.75rem; }
+        
+        /* Estructura */
         .contenedor { padding: 40px 20px; max-width: 1000px; margin: auto; }
         .titulo-seccion { color: var(--dorado-fuerte); text-align: center; font-family: 'Cinzel', serif; font-size: clamp(1.5rem, 6vw, 2.2rem); font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
         .texto-principal p, .texto-vision p { font-weight: 700; color: var(--negro-puro); margin-bottom: 15px; text-align: center; }
         .resaltado { color: var(--dorado-fuerte); font-weight: 900; }
         .seccion-gris { background-color: var(--gris-claro); padding: 30px 0; }
-        .galeria-fotos { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .galeria-fotos img { width: 100%; max-width: 280px; height: auto; aspect-ratio: 1/1; object-fit: cover; border: 3px solid var(--dorado); border-radius: 8px; }
-        .item-fe { border-left: 5px solid var(--dorado-fuerte); padding-left: 15px; margin-bottom: 20px; }
-        .item-fe h3 { color: var(--dorado-fuerte); font-family: 'Cinzel', serif; font-size: 1.4rem; margin: 0; }
-        .item-fe p { font-size: 1.1rem; font-weight: 700; margin: 5px 0 0 0; text-align: left !important; }
+        
+        /* Botones */
+        .btn-youtube { display: inline-block; background-color: var(--rojo-yt); color: white !important; padding: 12px 25px; text-decoration: none; font-weight: 900; font-size: 1rem; border-radius: 50px; margin-top: 15px; }
+        .btn-tiktok { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; 
+            background-color: var(--tiktok-color); 
+            color: white !important; 
+            padding: 12px 25px; 
+            text-decoration: none; 
+            font-weight: 900; 
+            border-radius: 50px; 
+            border: 2px solid var(--dorado); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+        }
+        
+        /* Horarios y Galería */
         .grid-horarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
         .tarjeta { background: var(--blanco); padding: 15px; text-align: center; border: 2px solid var(--negro-puro); border-top: 5px solid var(--dorado-fuerte); border-radius: 8px; }
         .tarjeta h3 { color: var(--dorado-fuerte); font-size: 1rem; font-weight: 900; margin: 0; }
         .tarjeta .hora { font-size: 1.8rem; font-weight: 900; display: block; margin: 5px 0; }
-        .btn-youtube { display: inline-block; background-color: var(--rojo-yt); color: white !important; padding: 12px 25px; text-decoration: none; font-weight: 900; font-size: 1rem; border-radius: 50px; margin-top: 15px; }
+        
+        .galeria-fotos { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .galeria-fotos img { width: 100%; max-width: 280px; height: auto; aspect-ratio: 1/1; object-fit: cover; border: 3px solid var(--dorado); border-radius: 8px; }
+
+        /* Mapa y Footer */
         .mapa-contenedor { width: 100%; height: 450px; border: 3px solid var(--dorado-fuerte); margin-top: 15px; }
         iframe { width: 100%; height: 100%; border: 0; }
         footer { background-color: var(--negro-puro); padding: 40px 20px; text-align: center; }
         .mensaje-final { font-family: 'Cinzel', serif; color: var(--dorado); font-size: clamp(1.4rem, 5vw, 2rem); font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
         .footer-datos { color: #ffffff !important; font-weight: 800; font-size: 1rem; line-height: 1.8; }
+        
+        /* WhatsApp Flotante */
         .float-wa { position: fixed; bottom: 20px; left: 20px; background: #25D366; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 2000; }
     </style>
 </head>
@@ -81,23 +126,12 @@
     <section class="contenedor" id="tiktok">
         <h2 class="titulo-seccion">Nuestros Momentos</h2>
         <div style="display: flex; justify-content: center;">
-            <div id="video-tiktok-aqui" style="text-align: center; margin: 20px 0;">
-                <a href="https://vm.tiktok.com/ZNR91s44q/" target="_blank" 
-                   style="display: inline-block; background-color: var(--dorado); color: white; 
-                          padding: 12px 25px; text-decoration: none; font-weight: 900; 
-                          border-radius: 50px; font-family: 'Montserrat', sans-serif;
-                          box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);">
-                    VER VÍDEO EN TIKTOK 🎬
+            <div style="text-align: center; margin: 20px 0;">
+                <a href="https://www.tiktok.com/@temordejehova" target="_blank" rel="noopener noreferrer" class="btn-tiktok">
+                    <span>VISITAR NUESTRO TIKTOK</span>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 448 512"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"/></svg>
                 </a>
             </div>
-        </div>
-    </section>
-
-    <section class="seccion-gris" id="creemos">
-        <div class="contenedor">
-            <h2 class="titulo-seccion">Qué Creemos</h2>
-            <div class="item-fe"><h3>Cristocentrismo</h3><p>Jesucristo es el centro y único Señor.</p></div>
-            <div class="item-fe"><h3>Autoridad Bíblica</h3><p>La Biblia es nuestra guía infalible.</p></div>
         </div>
     </section>
 
@@ -109,17 +143,6 @@
             <div class="tarjeta"><h3>VIERNES</h3><span class="hora">20:00</span><p>Oración</p></div>
             <div class="tarjeta"><h3>SÁBADOS</h3><span class="hora">20:00</span><p>Estudio</p></div>
         </div>
-        <div class="galeria-fotos">
-            <img src="imag 1.jpg" alt="Iglesia">
-            <img src="imag 2.jpg" alt="Comunidad">
-            <img src="imag 3.jpg" alt="Reunión">
-            <img src="imag 4.jpg" alt="Gozo">
-            <img src="imag 5.jpg" alt="Alabanza">
-            <img src="imag 6.jpg" alt="Júbilo">
-            <img src="imag 7.jpg" alt="Niños">
-            <img src="imag 8.jpg" alt="Alzad manos">
-            <img src="imag 9.jpg" alt="Danza">
-        </div>
     </section>
 
     <section class="seccion-gris" id="donde">
@@ -127,7 +150,7 @@
             <h2 class="titulo-seccion">Ubicación</h2>
             <p style="text-align: center; font-weight: 800;">Calle de las Vacas, Local 5 - Valdemoro</p>
             <div class="mapa-contenedor">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.789178129!2d-3.6806035!3d40.1915352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4220392345e691%3A0x6c627464010839a8!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.222370258757!2d-3.6766782!3d40.1929312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f53448408091%3A0x6396499645995171!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
