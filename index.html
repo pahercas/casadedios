@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,11 +17,10 @@
             --tiktok-color: #010101;
         }
         * { box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background-color: var(--blanco); color: var(--negro-puro); scroll-behavior: smooth; line-height: 1.5; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background-color: var(--blanco); color: var(--negro-puro); scroll-behavior: smooth; line-height: 1.6; }
         
-        /* Hero Section con Imagen de Fondo */
         .hero { 
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('fondo.jpg'); 
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('fondo.jpg');
             background-size: cover; 
             background-position: center; 
             height: 50vh; 
@@ -30,50 +30,47 @@
             align-items: center; 
             text-align: center; 
             color: white; 
-            padding: 20px; 
+            padding: 20px;
             border-bottom: 4px solid var(--dorado);
         }
         .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 8vw, 3.5rem); color: var(--dorado); margin: 0; font-weight: 700; }
         .hero p { font-size: clamp(1.1rem, 4vw, 1.6rem); font-style: italic; margin-top: 10px; font-weight: 800; color: #ffffff !important; }
         
-        /* Navegación */
         nav { background-color: var(--blanco); border-bottom: 3px solid var(--dorado); display: flex; justify-content: center; flex-wrap: wrap; padding: 5px; position: sticky; top: 0; z-index: 1000; }
         nav a { color: var(--negro-puro); text-decoration: none; font-weight: 900; padding: 8px 12px; text-transform: uppercase; font-size: 0.75rem; }
         
-        /* Estructura */
         .contenedor { padding: 40px 20px; max-width: 1000px; margin: auto; }
-        .titulo-seccion { color: var(--dorado-fuerte); text-align: center; font-family: 'Cinzel', serif; font-size: clamp(1.5rem, 6vw, 2.2rem); font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
-        .texto-principal p, .texto-vision p { font-weight: 700; color: var(--negro-puro); margin-bottom: 15px; text-align: center; }
-        .resaltado { color: var(--dorado-fuerte); font-weight: 900; }
-        .seccion-gris { background-color: var(--gris-claro); padding: 30px 0; }
+        .titulo-seccion { color: var(--dorado-fuerte); text-align: center; font-family: 'Cinzel', serif; font-size: clamp(1.5rem, 6vw, 2.2rem); font-weight: 700; margin-bottom: 25px; text-transform: uppercase; }
         
-        /* Galería de Fotos */
+        /* AJUSTE CLAVE: Alineación justificada y eliminación de restricciones */
+        .texto-justificado p { 
+            font-weight: 700; 
+            color: var(--negro-puro); 
+            margin-bottom: 20px; 
+            text-align: justify; /* Cuadra el texto a ambos lados */
+            hyphens: auto; /* Ayuda a que las palabras se partan si es necesario para rellenar huecos */
+        }
+        
+        .resaltado { color: var(--dorado-fuerte); font-weight: 900; }
+        .seccion-gris { background-color: var(--gris-claro); padding: 40px 0; }
+        
         .galeria-fotos { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
         .galeria-fotos img { width: 100%; max-width: 280px; height: auto; aspect-ratio: 1/1; object-fit: cover; border: 3px solid var(--dorado); border-radius: 8px; }
         
-        /* Horarios */
         .grid-horarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
         .tarjeta { background: var(--blanco); padding: 15px; text-align: center; border: 2px solid var(--negro-puro); border-top: 5px solid var(--dorado-fuerte); border-radius: 8px; }
         .tarjeta h3 { color: var(--dorado-fuerte); font-size: 1rem; font-weight: 900; margin: 0; }
         .tarjeta .hora { font-size: 1.8rem; font-weight: 900; display: block; margin: 5px 0; }
         
-        /* Creencias */
-        .item-fe { border-left: 5px solid var(--dorado-fuerte); padding-left: 15px; margin-bottom: 20px; }
-        .item-fe h3 { color: var(--dorado-fuerte); font-family: 'Cinzel', serif; font-size: 1.4rem; margin: 0; }
-        .item-fe p { font-size: 1.1rem; font-weight: 700; margin: 5px 0 0 0; text-align: left !important; }
-
-        /* Botones */
         .btn-youtube { display: inline-block; background-color: var(--rojo-yt); color: white !important; padding: 12px 25px; text-decoration: none; font-weight: 900; font-size: 1rem; border-radius: 50px; margin-top: 15px; }
         .btn-tiktok { display: inline-flex; align-items: center; gap: 10px; background-color: var(--tiktok-color); color: white !important; padding: 12px 25px; text-decoration: none; font-weight: 900; border-radius: 50px; border: 2px solid var(--dorado); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         
-        /* Mapa y Footer */
         .mapa-contenedor { width: 100%; height: 450px; border: 3px solid var(--dorado-fuerte); margin-top: 15px; }
         iframe { width: 100%; height: 100%; border: 0; }
         footer { background-color: var(--negro-puro); padding: 40px 20px; text-align: center; }
         .mensaje-final { font-family: 'Cinzel', serif; color: var(--dorado); font-size: clamp(1.4rem, 5vw, 2rem); font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
         .footer-datos { color: #ffffff !important; font-weight: 800; font-size: 1rem; line-height: 1.8; }
         
-        /* WhatsApp Flotante */
         .float-wa { position: fixed; bottom: 20px; left: 20px; background: #25D366; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 2000; }
     </style>
 </head>
@@ -91,29 +88,25 @@
     <nav>
         <a href="#quienes">Nosotros</a>
         <a href="#vision">Visión</a>
-        <a href="#tiktok">TikTok</a>
         <a href="#horarios">Horarios</a>
         <a href="#donde">Ubicación</a>
         <a href="https://www.youtube.com/@casadediosvaldemoro" target="_blank" style="color:var(--rojo-yt)">YouTube</a>
     </nav>
 
     <section class="contenedor" id="quienes">
-        <h2 class="titulo-seccion">Quiénes Somos</h2>
-        <div class="texto-principal">
-            <p>Somos una iglesia que reconoce a <span class="resaltado">Jesucristo como el centro de nuestra fe</span>.</p>
-            <p>En Casa de Dios de Valdemoro somos una <span class="resaltado">familia espiritual</span> donde adoramos y crecemos juntos.</p>
-            <p>Buscamos ser un lugar de refugio, restauración y esperanza para cada persona que cruza nuestras puertas.</p>
+        <h2 class="titulo-seccion">QUIÉNES SOMOS</h2>
+        <div class="texto-justificado">
+            <p>Somos una comunidad cristiana que reconoce a <span class="resaltado">Jesucristo como Señor y Salvador</span>, y que confía en la guía del Espíritu Santo para transformar vidas y conducirnos a la verdad. Creemos en Dios como creador y sustentador de todo, y vivimos nuestra fe basados en la enseñanza de la Biblia, nuestra autoridad espiritual. Nuestra iglesia está abierta a todas las personas, sin distinción de edad, origen o cultura.</p>
+            <p>Aquí encontrarás un lugar para adorar a Dios, crecer en la fe y desarrollar los dones que Él ha puesto en tu vida, siempre en un ambiente de respeto, unidad y fraternidad. Nos mueve el llamado de Jesús a compartir el evangelio y a amar al prójimo, siguiendo la <span class="resaltado">Gran Comisión</span> y el <span class="resaltado">Gran Mandamiento</span>. Por eso te invitamos a visitarnos, participar en nuestros cultos y conocer de cerca nuestra comunidad. Será un honor recibirte.</p>
         </div>
     </section>
 
     <section class="seccion-gris" id="vision">
         <div class="contenedor">
-            <h2 class="titulo-seccion">Nuestra Visión</h2>
-            <div class="texto-vision">
-                <p>Creemos que Dios sigue transformando corazones hoy, guiados por el Espíritu Santo hacia la verdad en Cristo.</p>
-                <p>Nuestra visión es extender el Reino de Dios a través de la enseñanza bíblica, la oración y el servicio a nuestra comunidad.</p>
-                <p>La Biblia es nuestra autoridad y fundamento para vivir con propósito y esperanza.</p>
-                <div style="text-align: center; margin-top: 20px;">
+            <h2 class="titulo-seccion">NUESTRA VISIÓN</h2>
+            <div class="texto-justificado">
+                <p>Nuestra visión es ser una comunidad de seguidores de Jesús que muestran el amor de Dios a quienes nos rodean. Nuestra misión es extender el reino de Dios y formar una familia entorno a la fe, nuestra iglesia, que crece espiritualmente en base a la Biblia, el servicio cristiano y las misiones en el mundo para que todos puedan honrar el nombre de Dios. En otras palabras, nos sentimos llamados a la evangelización, la comunión, la educación cristiana, el servicio al prójimo y la adoración a Dios.</p>
+                <div style="text-align: center; margin-top: 25px;">
                     <a href="https://www.youtube.com/@casadediosvaldemoro" target="_blank" class="btn-youtube">CULTOS EN YOUTUBE</a>
                 </div>
             </div>
@@ -124,19 +117,11 @@
         <h2 class="titulo-seccion">Nuestros Momentos</h2>
         <div style="display: flex; justify-content: center;">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="https://www.tiktok.com/@temordejehova" target="_blank" rel="noopener noreferrer" class="btn-tiktok">
+                <a href="https://www.tiktok.com/@temordejehova" target="_blank" class="btn-tiktok">
                     <span>VISITAR NUESTRO TIKTOK</span>
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 448 512"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"/></svg>
                 </a>
             </div>
-        </div>
-    </section>
-
-    <section class="seccion-gris" id="creemos">
-        <div class="contenedor">
-            <h2 class="titulo-seccion">Qué Creemos</h2>
-            <div class="item-fe"><h3>Cristocentrismo</h3><p>Jesucristo es el centro y único Señor de nuestras vidas.</p></div>
-            <div class="item-fe"><h3>Autoridad Bíblica</h3><p>La Biblia es nuestra guía infalible y la Palabra inspirada de Dios.</p></div>
         </div>
     </section>
 
@@ -167,7 +152,7 @@
             <h2 class="titulo-seccion">Ubicación</h2>
             <p style="text-align: center; font-weight: 800;">Calle de las Vacas, Local 5 - Valdemoro</p>
             <div class="mapa-contenedor">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.7816694665476!2d-3.6792446!3d40.1861217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd421f66345e69df%3A0x8e8316c05d76d40c!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.2435422833075!2d-3.6766!3d40.1896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd421f57d620579b%3A0x6a0c0e0e0e0e0e0e!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
