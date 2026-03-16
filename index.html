@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +7,7 @@ HTML
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root { 
-            --dorado: #D4AF37; 
+            --dorado: #D4AF37;
             --dorado-fuerte: #8B6B23; 
             --negro-puro: #000000; 
             --blanco: #ffffff; 
@@ -42,13 +41,13 @@ HTML
         .contenedor { padding: 40px 20px; max-width: 1000px; margin: auto; }
         .titulo-seccion { color: var(--dorado-fuerte); text-align: center; font-family: 'Cinzel', serif; font-size: clamp(1.5rem, 6vw, 2.2rem); font-weight: 700; margin-bottom: 25px; text-transform: uppercase; }
         
-        /* AJUSTE CLAVE: Alineación justificada y eliminación de restricciones */
-        .texto-justificado p { 
+        /* Ajuste de párrafos: Alineación justificada para cuadrar los extremos */
+        .texto-bloque p { 
             font-weight: 700; 
             color: var(--negro-puro); 
-            margin-bottom: 20px; 
-            text-align: justify; /* Cuadra el texto a ambos lados */
-            hyphens: auto; /* Ayuda a que las palabras se partan si es necesario para rellenar huecos */
+            margin-bottom: 18px; 
+            text-align: justify; /* Cuadra los renglones a ambos lados */
+            text-align-last: center; /* Centra la última línea de cada párrafo */
         }
         
         .resaltado { color: var(--dorado-fuerte); font-weight: 900; }
@@ -62,6 +61,11 @@ HTML
         .tarjeta h3 { color: var(--dorado-fuerte); font-size: 1rem; font-weight: 900; margin: 0; }
         .tarjeta .hora { font-size: 1.8rem; font-weight: 900; display: block; margin: 5px 0; }
         
+        /* Formato para secciones con títulos a la izquierda */
+        .item-fe { border-left: 5px solid var(--dorado-fuerte); padding-left: 20px; margin-bottom: 25px; text-align: left; }
+        .item-fe h3 { color: var(--dorado-fuerte); font-family: 'Cinzel', serif; font-size: 1.3rem; margin: 0; text-transform: uppercase; }
+        .item-fe p { font-size: 1.05rem; font-weight: 700; margin: 8px 0 0 0; text-align: justify; }
+
         .btn-youtube { display: inline-block; background-color: var(--rojo-yt); color: white !important; padding: 12px 25px; text-decoration: none; font-weight: 900; font-size: 1rem; border-radius: 50px; margin-top: 15px; }
         .btn-tiktok { display: inline-flex; align-items: center; gap: 10px; background-color: var(--tiktok-color); color: white !important; padding: 12px 25px; text-decoration: none; font-weight: 900; border-radius: 50px; border: 2px solid var(--dorado); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         
@@ -88,36 +92,53 @@ HTML
     <nav>
         <a href="#quienes">Nosotros</a>
         <a href="#vision">Visión</a>
+        <a href="#creemos">Qué Creemos</a>
         <a href="#horarios">Horarios</a>
         <a href="#donde">Ubicación</a>
         <a href="https://www.youtube.com/@casadediosvaldemoro" target="_blank" style="color:var(--rojo-yt)">YouTube</a>
     </nav>
 
     <section class="contenedor" id="quienes">
-        <h2 class="titulo-seccion">QUIÉNES SOMOS</h2>
-        <div class="texto-justificado">
+        <h2 class="titulo-seccion">Quiénes Somos</h2>
+        <div class="texto-bloque">
             <p>Somos una comunidad cristiana que reconoce a <span class="resaltado">Jesucristo como Señor y Salvador</span>, y que confía en la guía del Espíritu Santo para transformar vidas y conducirnos a la verdad. Creemos en Dios como creador y sustentador de todo, y vivimos nuestra fe basados en la enseñanza de la Biblia, nuestra autoridad espiritual. Nuestra iglesia está abierta a todas las personas, sin distinción de edad, origen o cultura.</p>
-            <p>Aquí encontrarás un lugar para adorar a Dios, crecer en la fe y desarrollar los dones que Él ha puesto en tu vida, siempre en un ambiente de respeto, unidad y fraternidad. Nos mueve el llamado de Jesús a compartir el evangelio y a amar al prójimo, siguiendo la <span class="resaltado">Gran Comisión</span> y el <span class="resaltado">Gran Mandamiento</span>. Por eso te invitamos a visitarnos, participar en nuestros cultos y conocer de cerca nuestra comunidad. Será un honor recibirte.</p>
+            <p>Aquí encontrarás un lugar para adorar a Dios, crecer en la fe y desarrollar los dones que Él ha puesto en tu vida, siempre en un ambiente de respeto, unidad y fraternidad. Nos mueve el llamado de Jesús a compartir el evangelio y a amar al prójimo, siguiendo la <span class="resaltado">Gran Comisión</span> y el <span class="resaltado">Gran Mandamiento</span>. Te invitamos a visitarnos, participar en nuestros cultos y conocer de cerca nuestra comunidad. Será un honor recibirte.</p>
         </div>
     </section>
 
     <section class="seccion-gris" id="vision">
         <div class="contenedor">
-            <h2 class="titulo-seccion">NUESTRA VISIÓN</h2>
-            <div class="texto-justificado">
-                <p>Nuestra visión es ser una comunidad de seguidores de Jesús que muestran el amor de Dios a quienes nos rodean. Nuestra misión es extender el reino de Dios y formar una familia entorno a la fe, nuestra iglesia, que crece espiritualmente en base a la Biblia, el servicio cristiano y las misiones en el mundo para que todos puedan honrar el nombre de Dios. En otras palabras, nos sentimos llamados a la evangelización, la comunión, la educación cristiana, el servicio al prójimo y la adoración a Dios.</p>
-                <div style="text-align: center; margin-top: 25px;">
+            <h2 class="titulo-seccion">Nuestra Visión</h2>
+            <div class="texto-bloque">
+                <p>Nuestra visión es ser una comunidad de seguidores de Jesús que muestran el amor de Dios a quienes nos rodean. Nuestra misión es extender el reino de Dios y formar una familia en torno a la fe, nuestra iglesia, que crece espiritualmente en base a la Biblia, el servicio cristiano y las misiones en el mundo para que todos puedan honrar el nombre de Dios. Nos sentimos llamados a la evangelización, la comunión, la educación cristiana, el servicio al prójimo y la adoración a Dios.</p>
+                <div style="text-align: center; margin-top: 20px;">
                     <a href="https://www.youtube.com/@casadediosvaldemoro" target="_blank" class="btn-youtube">CULTOS EN YOUTUBE</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contenedor" id="tiktok">
+    <section class="contenedor" id="creemos">
+        <h2 class="titulo-seccion">Qué Creemos</h2>
+        <div class="item-fe">
+            <h3>La Santísima Trinidad</h3>
+            <p>Creemos en un solo Dios que existe eternamente en tres personas: el Padre, el Hijo (Jesucristo) y el Espíritu Santo. Reconocemos a Jesucristo como el centro y único Señor de nuestras vidas, nuestro Salvador y el puente hacia la verdad.</p>
+        </div>
+        <div class="item-fe">
+            <h3>Autoridad Bíblica</h3>
+            <p>La Biblia es nuestra guía infalible y la Palabra inspirada de Dios. Es el fundamento sólido sobre el cual edificamos nuestra fe, nuestra enseñanza y nuestro servicio a la comunidad.</p>
+        </div>
+        <div class="item-fe">
+            <h3>Transformación por el Espíritu</h3>
+            <p>Confiamos en la guía del Espíritu Santo para transformar corazones, repartir dones y conducirnos a una vida con propósito y esperanza en Cristo.</p>
+        </div>
+    </section>
+
+    <section class="seccion-gris" id="tiktok">
         <h2 class="titulo-seccion">Nuestros Momentos</h2>
         <div style="display: flex; justify-content: center;">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="https://www.tiktok.com/@temordejehova" target="_blank" class="btn-tiktok">
+                <a href="https://www.tiktok.com/@temordejehova" target="_blank" rel="noopener noreferrer" class="btn-tiktok">
                     <span>VISITAR NUESTRO TIKTOK</span>
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 448 512"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z"/></svg>
                 </a>
@@ -152,7 +173,7 @@ HTML
             <h2 class="titulo-seccion">Ubicación</h2>
             <p style="text-align: center; font-weight: 800;">Calle de las Vacas, Local 5 - Valdemoro</p>
             <div class="mapa-contenedor">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.2435422833075!2d-3.6766!3d40.1896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd421f57d620579b%3A0x6a0c0e0e0e0e0e0e!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.7816694665476!2d-3.6792446!3d40.1861217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd421f66345e69df%3A0x8e8316c05d76d40c!2sCalle%20de%20las%20Vacas%2C%205%2C%2028341%20Valdemoro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
